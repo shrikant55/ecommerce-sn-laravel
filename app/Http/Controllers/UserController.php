@@ -8,8 +8,8 @@ class UserController extends Controller
 {
     //
     function login(Request $req){
-        //dd($req);
-        // @csrf
+        // dd($req);
+        //  @csrf
         $user =  User::where(['email'=>$req->email])->first();
         
         if(!$user || !Hash::check($req->password,$user->password))
@@ -17,7 +17,7 @@ class UserController extends Controller
             return "Username or Password does not matched";
         }
         else{
-            
+              
             $req->session()->put('user',$user);
             return redirect('/');   
         }

@@ -33,8 +33,9 @@
                 width: 25%;
             }
             .detail-img{
-                width:100%
+                width:100%;
             }
+            
         </style>
 
     <!-- <script>
